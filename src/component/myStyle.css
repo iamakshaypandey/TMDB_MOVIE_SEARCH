@@ -1,0 +1,32 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+#sidebar-wrapper .list-group {
+    width: 15rem !important;
+}
+
+.card-width{
+    width: 100%;
+    /* height: 200px; */
+}
+
+.movie-img-wh{
+    margin: auto;
+    width: 60%;
+    height: 340px;
+}
+
+.footer-wh{
+    width: 100%;
+    height: auto;
+}
+
+
+
+@media (max-width:800px) {
+    .hidden{
+        display: none;
+    }
+}
