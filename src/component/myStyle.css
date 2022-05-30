@@ -1,6 +1,7 @@
 *{
     margin: 0;
     padding: 0;
+    /* border: 1px solid black; */
 }
 
 #sidebar-wrapper .list-group {
@@ -11,10 +12,21 @@
     width: 100%;
 }
 
+.img-back{
+    /* opacity: 0.2; */
+    width: 100%;
+    box-sizing: border-box;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+}
+
+
 .movie-img-wh{
-    margin: auto;
-    width: 60%;
-    height: 340px;
+    /* opacity: 1; */
+    /* margin-left:1rem ; */
+    width: 100%;
+    height: 365px;
 }
 
 .footer-wh{

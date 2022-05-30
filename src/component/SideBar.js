@@ -21,7 +21,9 @@ export const SideBar = ({movie}) => {
             <div className="border-end bg-white " id="sidebar-wrapper">
                 <div className="list-group list-group-flush">
                 <div className='scroll' data-bs-spy="scroll" data-bs-target="#navbar-example3" data-bs-offset="0" tabindex="0">
+                <h4 className='bg-primary p-2 m-2'>Searched Movies</h4>
                     {
+                        
                         movie ? movie.map(movie=>
                         <div key={movie.id} className="list-group-item list-group-item-action
                          list-group-item-light p-3"
@@ -29,7 +31,7 @@ export const SideBar = ({movie}) => {
                         >{movie.title}
                         </div>
                           )
-                          : 'movie not exsist'
+                          : ''
                     }
                 </div>
                 </div>
