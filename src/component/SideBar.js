@@ -17,8 +17,8 @@ export const SideBar = ({movie}) => {
       console.log(movieDAta,"....",);
   return (
     <>
-        <div className="d-flex mt-3" id="wrapper">
-            <div className="border-end bg-white hidden" id="sidebar-wrapper">
+        <div className="d-flex  mt-3" id="wrapper">
+            <div className="border-end bg-white " id="sidebar-wrapper">
                 <div className="list-group list-group-flush">
                 <div className='scroll' data-bs-spy="scroll" data-bs-target="#navbar-example3" data-bs-offset="0" tabindex="0">
                     {

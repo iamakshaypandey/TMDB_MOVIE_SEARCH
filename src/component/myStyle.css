@@ -24,7 +24,7 @@
 
 .scroll{
     overflow-y: scroll;
-    height: 70vh;
+    height: 80vh;
 }
 
 
@@ -32,5 +32,8 @@
 @media (max-width:800px) {
     .hidden{
         display: none;
+    }
+    #sidebar-wrapper .list-group {
+        width: 10rem !important;
     }
 }
