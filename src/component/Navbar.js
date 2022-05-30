@@ -1,4 +1,4 @@
-import React, { useReducer, useState } from 'react'
+import React, {  useState } from 'react'
 import BRAND from '../staticImg/barnd.svg'
 import axios from 'axios'
 import { SideBar } from './SideBar'
@@ -13,7 +13,7 @@ export const Navbar = () => {
         e.preventDefault()
         const {value} = e.target
         if(!value)return
-        axios.get(`https://api.themoviedb.org/3/search/movie?api_key=5d98a7a1405b8032e28c31e19e4d10a9&language=en-US&query=${value}&page=2&include_adult=false`)
+        axios.get(`https://api.themoviedb.org/3/search/movie?api_key=5d98a7a1405b8032e28c31e19e4d10a9&language=en-US&query=${value}&page=1&include_adult=false`)
         .then(res=>setData(res.data.results))
         .catch(err=>console.log(err))
         

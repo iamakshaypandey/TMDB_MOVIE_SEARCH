@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import { MainBar } from './MainBar'
 import './myStyle.css'
-import axios from 'axios'
-import { Navbar } from './Navbar'
+// import axios from 'axios'
+// import { Navbar } from './Navbar'
 
 export const SideBar = ({movie}) => {
     const [movieDAta,setSearch] = useState('')
@@ -12,6 +12,7 @@ export const SideBar = ({movie}) => {
         return  setSearch(movData)
 
     }
+    // if(!movieDAta)return
    
       console.log(movieDAta,"....",);
   return (
@@ -19,16 +20,18 @@ export const SideBar = ({movie}) => {
         <div className="d-flex mt-3" id="wrapper">
             <div className="border-end bg-white hidden" id="sidebar-wrapper">
                 <div className="list-group list-group-flush">
+                <div className='scroll' data-bs-spy="scroll" data-bs-target="#navbar-example3" data-bs-offset="0" tabindex="0">
                     {
                         movie ? movie.map(movie=>
-                        <a key={movie.id} className="list-group-item list-group-item-action
+                        <div key={movie.id} className="list-group-item list-group-item-action
                          list-group-item-light p-3"
-                        //  href=''
                          onClick={()=>MovieDetails(movie)}
-                        >{movie.title}</a>
+                        >{movie.title}
+                        </div>
                           )
                           : 'movie not exsist'
                     }
+                </div>
                 </div>
             </div>
             <MainBar  movData={movieDAta}  />
