@@ -14,11 +14,16 @@
 
 .img-back{
     /* opacity: 0.2; */
-    width: 100%;
+    /* margin: auto; */
+    width: 80%;
+    height:340px;
     box-sizing: border-box;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: 50% 50%;
+    object-fit: cover;
+    /* font-stretch: ; */
+    /* background: linear-gradient(#f67a36,#ed008c); */
 }
 
 
@@ -36,7 +41,7 @@
 
 .scroll{
     overflow-y: scroll;
-    height: 80vh;
+    height: 800px;
 }
 
 
@@ -47,5 +52,15 @@
     }
     #sidebar-wrapper .list-group {
         width: 10rem !important;
+    }
+    .scroll{
+        height: 100vh;
+    }
+    
+}
+
+@media (max-width:500px) {
+    .scroll{
+        height: 100vh;
     }
 }

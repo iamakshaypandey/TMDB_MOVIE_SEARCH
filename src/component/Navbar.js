@@ -6,7 +6,7 @@ import { SideBar } from './SideBar'
 
 export const Navbar = () => {
     const [data,setData] = useState('')
-    console.log(data,'data');
+    // console.log(data,'data');
     
 
     const handleClick = (e)=>{
@@ -17,6 +17,12 @@ export const Navbar = () => {
         .then(res=>setData(res.data.results))
         .catch(err=>console.log(err))
         
+    }
+
+    const SearchTvSession = () =>{
+        axios.get(`https://api.themoviedb.org/3/search/movie?api_key=5d98a7a1405b8032e28c31e19e4d10a9&language=en-US&query=a&page=1&include_adult=false/tv/popular`)
+        .then(res=>console.log(res.data.results))
+        .catch(err=>console.log(err))
     }
 
     
@@ -31,20 +37,6 @@ export const Navbar = () => {
         </button>
 
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul className="navbar-nav mr-auto">
-                <li className="nav-item active">
-                    <a className="nav-link text-white h6 m-3" href="index.html">Movie <span className="sr-only">(current)</span></a>
-                </li>
-                <li className="nav-item">
-                    <a className="nav-link text-white h6 m-3" href="index.html">TV Shows</a>
-                </li>
-                <li className="nav-item">
-                    <a className="nav-link text-white h6 m-3" href="index.html">People</a>
-                </li>
-                <li className="nav-item">
-                    <a className="nav-link text-white h6 m-3" href="index.html">More</a>
-                </li>
-            </ul>
             <form className="form-inline my-2 my-lg-0">
             <input className="form-control mr-sm-2"
              type="search" placeholder="Search movie"
@@ -56,6 +48,14 @@ export const Navbar = () => {
              className="btn btn-outline-success my-2 my-sm-0"
              type="submit">Search</button>
             </form>
+            <ul className="navbar-nav mr-auto">
+                <li className="nav-item active">
+                    <div className="nav-link text-white h6 m-3" onClick={SearchTvSession} >Populer show</div>    
+                </li>
+                <li className="nav-item">
+                    <div className="nav-link text-white h6 m-3" >Top Reted</div>
+                </li>
+            </ul>
         </div>
     </nav>
     {console.log(data,'data')}
