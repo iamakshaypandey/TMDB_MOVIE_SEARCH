@@ -4,6 +4,10 @@
     /* border: 1px solid black; */
 }
 
+.bg-color-nav{
+    background-color:lightslategrey
+}
+
 #sidebar-wrapper .list-group {
     width: 15rem !important;
 }
@@ -15,7 +19,7 @@
 .img-back{
     /* opacity: 0.2; */
     /* margin: auto; */
-    width: 80%;
+    width: 50%;
     height:340px;
     box-sizing: border-box;
     background-size: cover;
@@ -41,7 +45,7 @@
 
 .scroll{
     overflow-y: scroll;
-    height: 800px;
+    height: 700px;
 }
 
 

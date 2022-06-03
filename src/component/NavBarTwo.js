@@ -5,7 +5,7 @@ import { SideBar } from './SideBar'
 import { Link } from 'react-router-dom'
 
 
-export const Navbar = () => {
+export const NavBarTwo = () => {
     const [data,setData] = useState('')
     // console.log(data,'data');
     
@@ -35,7 +35,7 @@ export const Navbar = () => {
 
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <form className="form-inline my-2 my-lg-0">
-            <input className="form-control  mr-sm-2"
+            <input className="form-control mr-sm-2"
              type="search" placeholder="Search movie"
               aria-label="Search"
               name={'Search'}
@@ -46,7 +46,7 @@ export const Navbar = () => {
              type="submit">Search</button>
             </form>
             <ul className="navbar-nav mr-auto">
-                <li className="nav-item  active">
+                <li className="nav-item active">
                     <Link className="nav-link text-white h6 m-3 btn-outline-success" to='/PopulerSearch' >Populer show</Link>    
                 </li>
                 <li className="nav-item">
@@ -56,7 +56,7 @@ export const Navbar = () => {
         </div>
     </nav>
     {console.log(data,'data')}
-    <SideBar movie={data}/>
+    {/* <SideBar movie={data}/> */}
     </>
   )
 }
