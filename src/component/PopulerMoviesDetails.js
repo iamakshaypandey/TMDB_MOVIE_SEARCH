@@ -14,7 +14,7 @@ export const PopulerMoviesDetails = () => {
     useEffect(() => {
         getMovieWithId();
 
-    }, []);
+    }, [urlParams]);
 
     const getMovieWithId = async () => {
         try {
