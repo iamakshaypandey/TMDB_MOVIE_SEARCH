@@ -60,27 +60,27 @@ export const SideBar = ({ movie }) => {
 
     return (
         <>
-            <div className="d-flex mt-3" id="wrapper">
-                <div className="border-end bg-white scrolling-page col-4 " id="sidebar-wrapper">
+            <div className="d-flex" id="wrapper">
+                <div className="border-end  scrolling-page " id="sidebar-wrapper">
                     <div className="list-group list-group-flush">
                         <div className='scroll' data-bs-spy="scroll" data-bs-target="#navbar-example3" data-bs-offset="0" tabIndex="0">
-                            <h4 className='bg-primary  p-2 m-2'>Searched Movies</h4>
                             {
                                 movie ? movie.map(movie =>
-                                    <div key={movie.id} className="scrolling list-group-item list-group-item-action
+                                    <div key={movie.id} className="scrolling  list-group-item list-group-item-action
                          list-group-item-light p-3 client-h"
                                         onClick={() => MovieDetails(movie)}
                                     >
-                                        <div className='card'>
+                                        <div className='card bg-colore-card'>
                                             <img src={`https://image.tmdb.org/t/p/w220_and_h330_face${movie.poster_path}`} alt="card-img" />
                                             <div className='card-body'>
-                                                <div>{movie.title}({movie.release_date ? movie.release_date.slice(0, 4) : ''})</div>
-                                                <div><strong>language:</strong>{movie.original_language}</div>
+                                                <div className='text-light'>{movie.title}({movie.release_date ? movie.release_date.slice(0, 4) : ''})</div>
+                                                <div className='text-light'><strong>language:</strong>{movie.original_language}</div>
                                             </div>
                                         </div>
                                     </div>
                                 )
                                     : ''
+                                    // <div className='bg-warning w-100 h-100 container-fluide'></div>
                             }
                         </div>
                     </div>

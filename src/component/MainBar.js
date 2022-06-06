@@ -10,30 +10,37 @@ export const MainBar = ({movData}) => {
     <>
     {
     movData ?
-    <div className='img-back' style={{backgroundImage:`url(https://image.tmdb.org/t/p/w220_and_h330_face${movData.backdrop_path})`}}>
-        <div className='d-flex justify-content-center align-item-center flex-wrap'>
-            <div className='p-4'>
-                <img className="card-img-top movie-img-wh " src={`https://image.tmdb.org/t/p/w220_and_h330_face${movData.poster_path}`}   alt="DATAIMAGE NOT FOUND"/>
-            </div>
-            <div className='p-4 ml-4 mt-4 shadow p-3 mb-5 bg-white rounded bg-white w-75'>
-                <div className='text-left'>
-                    <strong className='text-dark'>Movie Name: </strong>
-                    <h1 className='text-danger font-weight-bold'>{movData.original_title}({movData.release_date ? movData.release_date.slice(0,4):''})</h1>
-                    <p className='font-weight-bold'>Language:<span className='m-2'>({movData.original_language})</span></p>
-                    <strong className='text-dark'>Release Date: <span>{movData.release_date}</span></strong>
-                    <h4 className='text-dark font-weight-bold'>Overview:</h4>
-                    <p className=''>{movData.overview}</p>
-                    <strong className='text-dark'>popularity:<span className='m-2'>{movData.popularity}</span></strong>
-                    <br/>
-                    <strong className='text-dark'>Vote Average:<span className='m-2'>{movData.popularity}</span></strong>
-                    <br/>
-                    <strong className='text-dark'>Vote count:<span className='m-2'>{movData.popularity}</span></strong>
+                <div className='img-back m-auto' style={{
+                    backgroundImage: `linear-gradient(rgb(57 107 131 / 98%), rgba(0, 0, 0, 0.5)),url(https://image.tmdb.org/t/p/w220_and_h330_face${movData?.backdrop_path})`,
+                     }}>
+                    <div className='d-flex justify-content-center align-item-center flex-wrap'>
+                        <div className='p-4'>
+                            <img className="card-img-top movie-img-wh  " src={`https://image.tmdb.org/t/p/w220_and_h330_face${movData?.poster_path}`} alt="DATAIMAGE NOT FOUND" />
+                        </div>
+                        <div className=' m-4 shadow details-background rounded  w-75'>
+                            <div className='text-left'>
+                                <strong className='text-col'>Movie Name: </strong>
+                                <h3 className='text-p-overview-h font-weight-bold'>{movData?.original_title}({movData?.release_date ? movData?.release_date.slice(0, 4) : ''})</h3>
+                                <p className='font-weight-bold text-col'>Language:<span className='m-2 mb-0'>({movData?.original_language})</span></p>
+                                <strong className='text-col'>Release Date: </strong>
+                                <span className='font-weight-bold text-col-p'>{movData?.release_date}</span>
+                                <br/>
+                                <strong className='text-col font-weight-bold'>Overview:</strong>
+                                <p className='text-dark font-weight-bold text-col-p text-p-overview'>{movData?.overview}</p>
+                                <strong className='text-col'>popularity:</strong>
+                                <span className='m-2 font-weight-bold text-col-p'>{movData?.popularity}</span>
+                                <br />
+                                <strong className='text-col'>Vote Average:</strong>
+                                <span className='m-2 font-weight-bold text-col-p'>{movData?.popularity}</span>
+                                <br />
+                                <strong className='text-col'>Vote count:</strong>
+                                <span className='m-2 font-weight-bold text-col-p'>{movData?.popularity}</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </div>
-    </div>
-    : 
-   ''
+    : ''
+//    <div className='bg-dark w-100 container-fluide'></div>
     
     }
     </>

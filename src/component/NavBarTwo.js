@@ -25,7 +25,7 @@ export const NavBarTwo = () => {
     
   return (
     <>
-    <nav className="navbar navbar-expand-lg navbar-light bg-color-nav">
+    <nav className="navbar navbar-expand-lg navbar-light">
         <Link className="navbar-brand h1" to="/">
             <img src={BRAND} alt="brand" className='w-50 h-50' />
         </Link>
@@ -34,25 +34,24 @@ export const NavBarTwo = () => {
         </button>
 
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
-            <form className="form-inline my-2 my-lg-0">
+            <form className="mx-2 my-auto d-inline w-50">
             <input className="form-control mr-sm-2"
              type="search" placeholder="Search movie"
               aria-label="Search"
               name={'Search'}
               onChange={handleClick}
               />
-            <button
-             className="btn bg-dark btn-outline-success my-2 my-sm-0"
-             type="submit">Search</button>
             </form>
+            <div className='ml-auto'>
             <ul className="navbar-nav mr-auto">
                 <li className="nav-item active">
-                    <Link className="nav-link text-white h6 m-3 btn-outline-success" to='/PopulerSearch' >Populer show</Link>    
+                    <Link className="nav-link text-light h6 m-3 btn-outline-success" to='/PopulerSearch' >Populer show</Link>    
                 </li>
                 <li className="nav-item">
-                    <Link className="nav-link text-white h6 m-3 btn-outline-success" to='/TopRatedMovie' >Top Rated</Link>
+                    <Link className="nav-link text-light h6 m-3 btn-outline-success" to='/TopRatedMovie' >Top Rated</Link>
                 </li>
             </ul>
+            </div>
         </div>
     </nav>
     {console.log(data,'data')}

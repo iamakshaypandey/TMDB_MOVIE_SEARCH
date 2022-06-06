@@ -25,7 +25,7 @@ export const Navbar = () => {
     
   return (
     <>
-    <nav className="navbar navbar-expand-lg navbar-light bg-color-nav">
+    <nav className="navbar navbar-expand-lg navbar-light">
         <Link className="navbar-brand h1" to="/">
             <img src={BRAND} alt="brand" className='w-50 h-50' />
         </Link>
@@ -34,18 +34,15 @@ export const Navbar = () => {
         </button>
 
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
-            <form className="form-inline my-2 my-lg-0">
+            <form className="mx-2 my-auto d-inline w-50">
             <input className="form-control  mr-sm-2"
              type="search" placeholder="Search movie"
               aria-label="Search"
               name={'Search'}
               onChange={handleClick}
               />
-            <button
-             className="btn bg-dark btn-outline-success my-2 my-sm-0"
-             type="submit">Search</button>
             </form>
-            <ul className="navbar-nav mr-auto">
+            <ul className="navbar-nav ml-auto">
                 <li className="nav-item  active">
                     <Link className="nav-link text-white h6 m-3 btn-outline-success" to='/PopulerSearch' >Populer show</Link>    
                 </li>

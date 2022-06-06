@@ -29,14 +29,14 @@ export const PopulerSearch = () => {
             return (
               <div
                 key={populer.id}
-                className=" card m-4 col-4 col-md-3 col-sm-4  w-25 "
+                className=" card bg-colore-card text-p-overview m-4 col-4 col-md-3 col-sm-4  w-25 "
               >
                 <Link to={`/PopulerMoviesDetails?id=${populer.id}`}>
                   <img className="card-img-top" src={`https://image.tmdb.org/t/p/w220_and_h330_face${populer.poster_path}`} alt="Card" />
                 </Link>
                 <div className="card-body">
-                  <h6 className="text card-title">{populer.title}</h6>
-                  <p className="card-text">{populer.release_date}</p>
+                  <h6 className="text-light card-title text-p-overview-h">{populer.title}</h6>
+                  <strong className="card-text text-light">{populer.release_date}</strong>
                 </div>
               </div>
             )

@@ -31,24 +31,31 @@ export const PopulerMoviesDetails = () => {
         <>
             <NavBarTwo />
             <div className=' container'>
-                <div className='img-back m-auto' style={{ backgroundImage: `url(https://image.tmdb.org/t/p/w220_and_h330_face${popularDetails?.backdrop_path})` }}>
+                <div className='img-back m-auto' style={{
+                    backgroundImage: `linear-gradient(rgb(57 107 131 / 98%), rgba(0, 0, 0, 0.5)),url(https://image.tmdb.org/t/p/w220_and_h330_face${popularDetails?.backdrop_path})`,
+                     }}>
                     <div className='d-flex justify-content-center align-item-center flex-wrap'>
                         <div className='p-4'>
-                            <img className="card-img-top movie-img-wh " src={`https://image.tmdb.org/t/p/w220_and_h330_face${popularDetails?.poster_path}`} alt="DATAIMAGE NOT FOUND" />
+                            <img className="card-img-top movie-img-wh  " src={`https://image.tmdb.org/t/p/w220_and_h330_face${popularDetails?.poster_path}`} alt="DATAIMAGE NOT FOUND" />
                         </div>
-                        <div className='p-4 ml-4 mt-4 shadow p-3 mb-5 bg-white rounded bg-white w-75'>
+                        <div className=' m-4 shadow details-background rounded  w-75'>
                             <div className='text-left'>
-                                <strong className='text-dark'>Movie Name: </strong>
-                                <h1 className='text-danger font-weight-bold'>{popularDetails?.original_title}({popularDetails?.release_date ? popularDetails?.release_date.slice(0, 4) : ''})</h1>
-                                <p className='font-weight-bold'>Language:<span className='m-2'>({popularDetails?.original_language})</span></p>
-                                <strong className='text-dark'>Release Date: <span>{popularDetails?.release_date}</span></strong>
-                                <h4 className='text-dark font-weight-bold'>Overview:</h4>
-                                <p className=''>{popularDetails?.overview}</p>
-                                <strong className='text-dark'>popularity:<span className='m-2'>{popularDetails?.popularity}</span></strong>
+                                <strong className='text-col'>Movie Name: </strong>
+                                <h3 className=' text-p-overview-h font-weight-bold'>{popularDetails?.original_title}({popularDetails?.release_date ? popularDetails?.release_date.slice(0, 4) : ''})</h3>
+                                <p className='font-weight-bold text-col'>Language:<span className='m-2 mb-0'>({popularDetails?.original_language})</span></p>
+                                <strong className='text-col'>Release Date: </strong>
+                                <span className='font-weight-bold text-col-p'>{popularDetails?.release_date}</span>
+                                <br/>
+                                <strong className='text-col font-weight-bold'>Overview:</strong>
+                                <p className='text-dark font-weight-bold text-col-p text-p-overview'>{popularDetails?.overview}</p>
+                                <strong className='text-col'>popularity:</strong>
+                                <span className='m-2 font-weight-bold text-col-p'>{popularDetails?.popularity}</span>
                                 <br />
-                                <strong className='text-dark'>Vote Average:<span className='m-2'>{popularDetails?.popularity}</span></strong>
+                                <strong className='text-col'>Vote Average:</strong>
+                                <span className='m-2 font-weight-bold text-col-p'>{popularDetails?.popularity}</span>
                                 <br />
-                                <strong className='text-dark'>Vote count:<span className='m-2'>{popularDetails?.popularity}</span></strong>
+                                <strong className='text-col'>Vote count:</strong>
+                                <span className='m-2 font-weight-bold text-col-p'>{popularDetails?.popularity}</span>
                             </div>
                         </div>
                     </div>
