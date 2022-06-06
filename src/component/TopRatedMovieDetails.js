@@ -1,5 +1,6 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react'
+import { NavBarTwo } from './NavBarTwo';
 
 export const TopRatedMovieDetails = () => {
     const urlParamsTopMovie = window.location.search;
@@ -28,6 +29,7 @@ export const TopRatedMovieDetails = () => {
 
     return (
         <>
+        <NavBarTwo/>
         <div className='container'>
             <div className='img-back m-auto' style={{ backgroundImage: `url(https://image.tmdb.org/t/p/w220_and_h330_face${TopRatedMovieDetails?.backdrop_path})` }}>
                 <div className='d-flex justify-content-center align-item-center flex-wrap'>

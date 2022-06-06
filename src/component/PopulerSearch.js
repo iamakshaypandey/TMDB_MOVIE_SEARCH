@@ -1,14 +1,14 @@
-import React, { useContext, useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import { NavBarTwo } from './NavBarTwo'
-import { PopulerMoviesDetails } from './PopulerMoviesDetails'
+// import { PopulerMoviesDetails } from './PopulerMoviesDetails'
 import { Link } from 'react-router-dom'
 
 
 export const PopulerSearch = () => {
 
   const [populers, setPopuler] = useState([])
-  const [populersData, setPopulersDAta] = useState('')
+  // const [populersData, setPopulersDAta] = useState('')
 
   useEffect(() => {
     axios.get(`https://api.themoviedb.org/3/search/movie?api_key=5d98a7a1405b8032e28c31e19e4d10a9&language=en-US&query=a&page=1&include_adult=false/tv/popular`)
@@ -44,9 +44,6 @@ export const PopulerSearch = () => {
           }
         </div>
       </div>
-      {/* <Context.provider> */}
-      {/* <PopulerMoviesDetails populersDetail={populersData}/> */}
-      {/* </Context.provider> */}
     </>
   )
 }
