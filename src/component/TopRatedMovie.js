@@ -7,14 +7,15 @@ export const TopRatedMovie = () => {
 
   const [TopReteds, setTopRated] = useState([])
 
+  
   useEffect(() => {
-    axios.get(`https://api.themoviedb.org/3/search/movie?api_key=5d98a7a1405b8032e28c31e19e4d10a9&language=en-US&query=a&page=1&include_adult=false/tv/{tv_id}/season/{season_number}`)
+    axios.get(`https://api.themoviedb.org/3/movie/top_rated?api_key=5d98a7a1405b8032e28c31e19e4d10a9&language=en-US&query=a&page=1`)
       .then(res => {
         console.log(res.data.results)
         setTopRated(res.data.results)
       })
       .catch(err => console.error(err))
-  }, [])
+  }, []) 
 
   return (
     <>

@@ -13,8 +13,8 @@ export const PopulerMoviesDetails = () => {
 
     useEffect(() => {
         getMovieWithId();
-
-    }, [urlParams]);
+        // eslint-disable-next-line
+    }, []);
 
     const getMovieWithId = async () => {
         try {

@@ -50,7 +50,7 @@ export const Navbar = () => {
                     <Link className="nav-link text-white h6 m-3 btn-outline-success" to='/PopulerSearch' >Populer show</Link>    
                 </li>
                 <li className="nav-item">
-                    <Link className="nav-link text-white h6 m-3 btn-outline-success" to='/TopRatedMovie' >TV Seasons</Link>
+                    <Link className="nav-link text-white h6 m-3 btn-outline-success" to='/TopRatedMovie' >Top Rated</Link>
                 </li>
             </ul>
         </div>
