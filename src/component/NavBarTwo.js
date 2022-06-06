@@ -45,10 +45,10 @@ export const NavBarTwo = () => {
             <div className='ml-auto'>
             <ul className="navbar-nav mr-auto">
                 <li className="nav-item active">
-                    <Link className="nav-link text-light h6 m-3 btn-outline-success" to='/PopulerSearch' >Populer show</Link>    
+                    <Link className="nav-link text-light h6 m-3 btn-outline-info" to='/PopulerSearch' >Populer show</Link>    
                 </li>
                 <li className="nav-item">
-                    <Link className="nav-link text-light h6 m-3 btn-outline-success" to='/TopRatedMovie' >Top Rated</Link>
+                    <Link className="nav-link text-light h6 m-3 btn-outline-info" to='/TopRatedMovie' >Top Rated</Link>
                 </li>
             </ul>
             </div>
