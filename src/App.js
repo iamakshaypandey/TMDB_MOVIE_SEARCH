@@ -1,7 +1,7 @@
 import './App.css';
-import { Footer } from './component/Footer';
+// import { Footer } from './component/Footer';
 import { Navbar } from './component/Navbar';
-import { Routes, Route, Link } from "react-router-dom";
+import { Routes, Route,  } from "react-router-dom";
 import { PopulerSearch } from "./component/PopulerSearch";
 import { TopRatedMovie } from './component/TopRatedMovie';
 import { PopulerMoviesDetails } from './component/PopulerMoviesDetails';

@@ -1,7 +1,7 @@
 import React, {  useState } from 'react'
 import BRAND from '../staticImg/barnd.svg'
 import axios from 'axios'
-import { SideBar } from './SideBar'
+// import { SideBar } from './SideBar'
 import { Link } from 'react-router-dom'
 
 
