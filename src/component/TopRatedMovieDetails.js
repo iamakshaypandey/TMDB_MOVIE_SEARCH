@@ -4,7 +4,6 @@ import { NavBarTwo } from './NavBarTwo';
 
 export const TopRatedMovieDetails = () => {
     const urlParamsTopMovie = window.location.search;
-    console.log('urlParamsTopMovie', urlParamsTopMovie);
     const apiKey = "5d98a7a1405b8032e28c31e19e4d10a9"
 
     const [TopRatedMovieDetailsID, setTopRatedMovieDetailsID] = useState([]);
@@ -15,7 +14,6 @@ export const TopRatedMovieDetails = () => {
     const getTopMovieWithId = async () => {
         try {
             const res = await axios.get(apiUrl);
-            console.log("response is here ", res);
             setTopRatedMovieDetailsID(res.data)
         } catch (err) {
             console.error("ERROR IN getTopMovieWithId", err);
@@ -52,10 +50,10 @@ export const TopRatedMovieDetails = () => {
                                 <span className='m-2 font-weight-bold text-col-p'>{TopRatedMovieDetailsID?.popularity}</span>
                                 <br />
                                 <strong className='text-col'>Vote Average:</strong>
-                                <span className='m-2 font-weight-bold text-col-p'>{TopRatedMovieDetailsID?.popularity}</span>
+                                <span className='m-2 font-weight-bold text-col-p'>{TopRatedMovieDetailsID?.vote_average}</span>
                                 <br />
                                 <strong className='text-col'>Vote count:</strong>
-                                <span className='m-2 font-weight-bold text-col-p'>{TopRatedMovieDetailsID?.popularity}</span>
+                                <span className='m-2 font-weight-bold text-col-p'>{TopRatedMovieDetailsID?.vote_count}</span>
                             </div>
                         </div>
                     </div>

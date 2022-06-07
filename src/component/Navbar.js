@@ -3,11 +3,11 @@ import BRAND from '../staticImg/barnd.svg'
 import axios from 'axios'
 import { SideBar } from './SideBar'
 import { Link } from 'react-router-dom'
+import { PureMain } from './PureMain'
 
 
 export const Navbar = () => {
     const [data,setData] = useState('')
-    // console.log(data,'data');
     
 
     const handleClick = (e)=>{
@@ -16,16 +16,14 @@ export const Navbar = () => {
         if(!value)return
         axios.get(`https://api.themoviedb.org/3/search/movie?api_key=5d98a7a1405b8032e28c31e19e4d10a9&language=en-US&query=${value}&page=1&include_adult=false`)
         .then(res=>setData(res.data.results))
-        .catch(err=>console.log(err))
+        .catch(err=>console.error(err))
         
     }
 
     
-
-    
   return (
     <>
-    <nav className="navbar navbar-expand-lg navbar-light">
+    <nav className="navbar navbar-expand-lg bg-color-nav navbar-light">
         <Link className="navbar-brand h1" to="/">
             <img src={BRAND} alt="brand" className='w-50 h-50' />
         </Link>
@@ -52,8 +50,8 @@ export const Navbar = () => {
             </ul>
         </div>
     </nav>
-    {console.log(data,'data')}
-    <SideBar movie={data}/>
+   { data.length!==0?
+    <SideBar movie={data}/>:<PureMain/>}
     </>
   )
 }
